@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        color: aliceblue;
+        font-size: 20px;
+        text-align: center;
+      }
+      header,
+      nav,
+      .hero-section,
+      .main,
+      .image,
+      .extra,
+      .banner-sectioN {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
+      .header-section {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      header {
+        height: 70px;
+        background-color: black;
+        flex-grow: 1;
+      }
+      nav {
+        height: 70px;
+        background-color: rgb(255, 0, 0);
+        flex-grow: 6;
+      }
+      .hero-section {
+        height: 300px;
+        background-color: rgb(76, 134, 198);
+      }
+      .main {
+        height: 220px;
+        background-color: rgb(36, 52, 75);
+      }
+      .image {
+        height: 110px;
+        background-color: rgb(190, 227, 231);
+      }
+      .extra {
+        height: 110px;
+        background-color: rgb(78, 188, 151);
+      }
+      .banner-sectioN {
+        height: 137px;
+        background-color: rgb(255, 209, 105);
+      }
+      .main-section {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      @media (max-width: 400px) {
+        header,
+        nav {
+          flex-grow: 0;
+          width: 100%;
+        }
+        .main,
+        .image,
+        .extra {
+          width: 100vw;
+        }
+      }
+      @media (min-width: 400px) {
+        header,
+        nav {
+          flex-grow: 0;
+          width: 100%;
+        }
+        .main,
+        .image,
+        .extra {
+          width: 100vw;
+        }
+      }
+      @media (min-width: 768px) {
+        header {
+          flex-grow: 1;
+          width: auto;
+        }
+        nav {
+          flex-grow: 6;
+          width: auto;
+        }
+        .main {
+          width: 550px;
+        }
+        .image,
+        .extra {
+          width: 218px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="header-section">
+        <header>HEADER</header>
+        <nav>MENU</nav>
+      </div>
+      <div class="hero-section">HERO</div>
+      <div class="main-section">
+        <div class="main">MAIN</div>
+        <div class="wrapper">
+          <div class="image">IMAGE</div>
+          <div class="extra">EXTRA</div>
+        </div>
+      </div>
+      <div class="banner-sectioN">BANNER</div>
+    </div>
+  </body>
+</html>
