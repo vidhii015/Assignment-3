@@ -99,10 +99,13 @@
     position: absolute;
   }
   main .hero-section h1 {
-    padding: 0 22%;
+    padding: 0 20%;
   }
   main .hero-section p {
     padding: 0 22%;
+  }
+  main .hero-section .offer span:nth-child(2) {
+    margin-left: 13%;
   }
   main .hero-section .email input {
     padding: 10px 20px;

@@ -240,33 +240,31 @@
   }
 
   .btn {
-    padding: 8px 127px;
+    padding: 8px 120px;
   }
 
   header {
     position: relative;
   }
-  header label,
-  footer .footer-top label {
+  header label {
     display: flex;
     flex-direction: column;
     font-size: 7px;
   }
-  header label i,
-  footer .footer-top label i {
+  header label i {
     font-size: 22px;
   }
-  header .wrapper,
-  footer .footer-top .wrapper {
+  header .wrapper {
     position: absolute;
     top: 40px;
     right: 20px;
     opacity: 0;
     border-radius: 8px;
     flex-direction: column;
-    background-color: rgb(233, 233, 233);
+    background-color: rgba(238, 238, 238, 0.949);
     padding: 10px;
     visibility: hidden;
+    z-index: 1;
   }
   header .wrapper nav {
     flex-direction: column;
@@ -281,31 +279,36 @@
     margin-right: 0;
     margin-left: 0;
   }
-  main .hero-section .offer p:nth-child(1) {
+  main .hero-section .offer span:nth-child(1) {
     visibility: hidden;
   }
-  main .hero-section .offer p:nth-child(2) {
-    padding: 1px 0px;
+  main .hero-section .offer span:nth-child(2) {
+    padding: 1px 17px;
     border-radius: 40px;
+    margin-left: 0;
   }
   main .hero-section h1 {
-    padding: 0 37px;
-    font-size: 32px;
+    padding: 0;
+    width: 85vw;
+    font-size: 30px;
     line-height: 40px;
   }
   main .hero-section p {
-    padding: 0 30px;
+    padding: 0;
+    width: 85vw;
   }
-
   main .hero-section .email input {
-    padding: 10px 80px;
+    padding: 10px 75px;
     margin-bottom: 8px;
     margin-left: 0;
   }
   main .hero-section img {
     height: 270px;
-    width: 370px;
+    width: 90vw;
     object-fit: contain;
+  }
+  main .clients-section {
+    margin-top: 0;
   }
   main .clients-section p {
     font-size: 11px;
@@ -321,7 +324,7 @@
   }
   main .graph-section img {
     height: 270px;
-    width: 330px;
+    width: 70vw;
     object-fit: contain;
   }
   main .graph-section .infos {
@@ -344,8 +347,15 @@
     height: 3px;
     top: 0;
   }
+  main .work-section {
+    margin-top: 0;
+  }
   main .work-section h1 {
-    font-size: 20px;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  main .work-section .works .work-info p {
+    width: 80vw;
   }
   main .work-section .works {
     row-gap: 30px;
@@ -363,7 +373,7 @@
   }
   main .about-us-section img {
     height: 270px;
-    width: 340px;
+    width: 70vw;
     object-fit: contain;
   }
   main .about-us-section .about-us-info {
@@ -374,24 +384,24 @@
   main .about-us-section .about-us-info h1 {
     font-size: 20px;
     width: auto;
-    padding: 20px 70px 0 70px;
+    padding: 0 30px;
     line-height: 30px;
   }
   main .about-us-section .about-us-info p {
     width: auto;
     font-size: 14px;
-    padding: 0 20px;
+    padding: 0 15px;
   }
   main .about-us-section .about-us-info span {
-    padding: 10px 80px;
+    padding: 10px 70px;
   }
   main .profile-section {
     row-gap: 30px;
   }
   main .profile-section h3 {
-    padding: 30px 50px 0 50px;
-    font-size: 17px;
-    line-height: 25px;
+    padding: 30px 40px 0 40px;
+    font-size: 23px;
+    line-height: 32px;
   }
   main .profile-section p {
     font-size: 15px;
@@ -401,8 +411,10 @@
 
   main .profile-section .profiles .profile#two,
   main .profile-section .profiles .profile#three {
-    visibility: hidden;
-    position: absolute;
+    display: none;
+  }
+  main .profile-section .profiles {
+    justify-content: space-evenly;
   }
   main .profile-section .profiles .profile {
     flex-direction: column;
@@ -434,15 +446,15 @@
     padding: 50px 40px;
     gap: 20px;
   }
-  footer .footer-top h3 {
-    font-size: 15px;
-    display: flex;
-    justify-content: space-between;
+  footer .footer-top #links h3 {
+    font-size: 17px;
   }
-  footer .footer-top h3 i {
+  footer .footer-top #links i {
     opacity: 1;
   }
-  footer .footer-top nav,
+  footer .footer-top nav {
+    display: none;
+  }
   footer .footer-bottem img {
     visibility: hidden;
     position: absolute;
@@ -451,7 +463,7 @@
     padding: 30px 0;
   }
   footer .footer-bottem::before {
-    top: 82%;
+    top: 87%;
   }
 }
 >>>>>>> 364336c (Assignment)

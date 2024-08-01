@@ -410,7 +410,7 @@ footer .footer-bottem img {
 .btn-2 {
   color: var(--icon-color);
   background-color: var(--icon-bcg);
-  padding: 10px 15px;
+  padding: 10px 20px;
 }
 .title {
   font-size: 50px;
@@ -421,18 +421,6 @@ footer .footer-bottem img {
 .border {
   border: 3px solid var(--border-color);
 }
-
-/* .background-circle {
-  height: 200vh;
-  width: 98.5vw;
-  border-radius: 50%;
-  background-color: var(--icon-bcg);
-  position: absolute;
-  top: -90%;
-  z-index: -1; 
-  opacity: 0.5;
-  stroke: var(--border-color);
-} */
 header {
   display: flex;
   justify-content: space-between;
@@ -442,18 +430,15 @@ header {
 header img {
   object-fit: contain;
 }
-header input#toggle,
-footer .footer-top input#toggle {
+header input#toggle {
   display: none;
 }
-header input#toggle:checked + .wrapper,
-footer .footer-top input#toggle:checked + .wrapper {
+header input#toggle:checked + .wrapper {
   visibility: visible;
   top: 50px;
   opacity: 1;
 }
-header .wrapper nav,
-footer .footer-top .wrapper nav {
+header .wrapper nav {
   display: flex;
   transition: all 300ms;
   gap: 20px;
@@ -479,23 +464,24 @@ main .hero-section {
 }
 main .hero-section .offer {
   display: flex;
+  align-items: center;
   justify-content: center;
-  position: relative;
 }
-main .hero-section .offer p:nth-child(1) {
+main .hero-section .offer span:nth-child(1) {
   background-color: rgb(125, 194, 52);
   color: white;
   padding: 4px 12px;
   border-radius: 40px;
-  position: absolute;
-  left: 41%;
+  position: relative;
   visibility: visible;
+  z-index: 1;
 }
-main .hero-section .offer p:nth-child(2) {
+main .hero-section .offer span:nth-child(2) {
   background-color: rgb(234, 251, 218);
   padding: 4px 12px 4px 27px;
   border-radius: 0 40px 40px 0;
-  margin-left: 6%;
+  position: absolute;
+  margin-left: 10%;
 }
 main .hero-section h1,
 main .hero-section p,
@@ -665,17 +651,11 @@ main .profile-section p {
 }
 main .profile-section .profiles {
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  justify-content: space-between;
 }
-main .profile-section .profiles .profile#one,
-main .profile-section .profiles .profile#two,
-main .profile-section .profiles .profile#three {
-  visibility: visible;
-}
-
 main .profile-section .profiles .profile {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 10px;
   position: relative;
@@ -720,6 +700,7 @@ main .app-store-section .btn img {
 }
 footer {
   margin-top: 60px;
+  width: 100%;
   background-color: var(--footer-bcg-color);
   color: var(--bcg-primary-color);
   position: relative;
@@ -747,6 +728,12 @@ footer .footer-top nav a {
 footer .footer-top .install-app-quick-links img {
   margin-top: 15px;
 }
+footer .footer-top #links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 footer .footer-bottem {
   display: flex;
   justify-content: space-around;
