@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 @media (min-width: 1200px) {
   :root {
     --primary-padding: 60px 150px;
@@ -32,3 +35,49 @@
     width: 400px;
   }
 }
+=======
+>>>>>>> cd80496 (update)
+@media (min-width: 1200px) {
+  :root {
+    --primary-padding: 60px 150px;
+  }
+<<<<<<< HEAD
+  main .hero-section .offer span:nth-child(1) {
+    padding: 4px 12px;
+    border-radius: 40px;
+    right: 90%;
+  }
+  main .hero-section .offer span:nth-child(2) {
+    padding: 4px 12px 4px 27px;
+    border-radius: 0 40px 40px 0;
+    margin-left: 7%;
+  }
+
+=======
+>>>>>>> cd80496 (update)
+  main .hero-section h1 {
+    padding: 0 27%;
+  }
+  main .hero-section p {
+    padding: 0 32%;
+  }
+  main .graph-section {
+    padding: 60px 10px;
+  }
+<<<<<<< HEAD
+  main .profile-section .profiles {
+    justify-content: space-evenly;
+  }
+=======
+>>>>>>> cd80496 (update)
+  main .app-store-section .btn {
+    padding: 55px;
+  }
+  main .graph-section .info {
+    width: 400px;
+  }
+}
+<<<<<<< HEAD
+=======
+>>>>>>> 364336c (Assignment)
+>>>>>>> cd80496 (update)
