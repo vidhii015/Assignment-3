@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -47,3 +48,54 @@
     <div class="card"></div>
   </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .card {
+        height: 450px;
+        width: 750px;
+        margin: 100px auto;
+        background-image: linear-gradient(
+          rgb(244, 145, 0),
+          rgba(0, 0, 0, 0.847) 500px
+        );
+      }
+      .card::before {
+        content: "";
+        height: 200px;
+        width: 205px;
+        border-radius: 50%;
+        background-color: rgb(254, 253, 23);
+        position: absolute;
+        top: 30%;
+        left: 43%;
+        box-shadow: rgba(254, 253, 23, 0.501) 7px 3px 40px 6px,
+          rgba(254, 254, 23, 0.253) 0px 0px 48px 1px;
+      }
+      .card::after {
+        content: "";
+        height: 177px;
+        width: 175px;
+        border-radius: 50%;
+        background-color: rgb(212, 133, 14);
+        position: absolute;
+        top: 30%;
+        left: 43%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card"></div>
+  </body>
+</html>
+>>>>>>> 364336c (Assignment)

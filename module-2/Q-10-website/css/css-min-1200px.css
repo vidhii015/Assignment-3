@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @media (min-width: 1200px) {
   :root {
     --primary-padding: 60px 150px;
@@ -32,3 +33,25 @@
     width: 400px;
   }
 }
+=======
+@media (min-width: 1200px) {
+  :root {
+    --primary-padding: 60px 150px;
+  }
+  main .hero-section h1 {
+    padding: 0 27%;
+  }
+  main .hero-section p {
+    padding: 0 32%;
+  }
+  main .graph-section {
+    padding: 60px 10px;
+  }
+  main .app-store-section .btn {
+    padding: 55px;
+  }
+  main .graph-section .info {
+    width: 400px;
+  }
+}
+>>>>>>> 364336c (Assignment)
