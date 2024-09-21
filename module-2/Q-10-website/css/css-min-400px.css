@@ -215,6 +215,7 @@
   }
   footer .footer-top .links h3 {
     font-size: 17px;
+<<<<<<< HEAD
   }
   footer .footer-top .links i {
     opacity: 1;
@@ -536,12 +537,20 @@
     font-size: 15px;
     display: flex;
     justify-content: space-between;
+=======
+>>>>>>> 8804cf3 (assignment)
   }
-  footer .footer-top h3 i {
+  footer .footer-top .links i {
     opacity: 1;
   }
+<<<<<<< HEAD
   footer .footer-top nav,
 >>>>>>> cd80496 (update)
+=======
+  footer .footer-top nav {
+    display: none;
+  }
+>>>>>>> 8804cf3 (assignment)
   footer .footer-bottem img {
     visibility: hidden;
     position: absolute;
@@ -551,11 +560,15 @@
   }
   footer .footer-bottem::before {
 <<<<<<< HEAD
+<<<<<<< HEAD
     top: 86%;
   }
 }
 =======
     top: 82%;
+=======
+    top: 86%;
+>>>>>>> 8804cf3 (assignment)
   }
 }
 >>>>>>> 364336c (Assignment)
