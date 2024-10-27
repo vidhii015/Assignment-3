@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.825);
+        overflow: hidden;
+      }
+      .slider {
+        width: 600px;
+      }
+      .slides {
+        display: flex;
+        transition: all 300ms;
+      }
+      .slide {
+        min-width: 100%;
+        height: 350px;
+        border-radius: 12px;
+        object-fit: cover;
+        filter: blur(5px);
+        transition: all 300ms;
+        z-index: 0;
+        margin: 0 10px;
+      }
+      .slide.active {
+        filter: none;
+        transform: scale(1.2);
+        z-index: 1;
+        box-shadow: rgba(25, 25, 26, 0.349) 0px 7px 29px 0px;
+      }
+      .prev,
+      .next {
+        position: absolute;
+        top: 45%;
+        padding: 6px 12px;
+        background-color: transparent;
+        color: white;
+        font-size: 35px;
+        border: 0;
+        border-radius: 4px;
+        cursor: pointer;
+        z-index: 2;
+      }
+      .prev {
+        left: 20px;
+      }
+      .next {
+        right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider">
+      <div class="slides">
+        <img
+          src="https://images.pexels.com/photos/20813072/pexels-photo-20813072/free-photo-of-sun-over-clouds-and-hills.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+          class="slide active"
+        />
+        <img
+          src="https://images.pexels.com/photos/1776901/pexels-photo-1776901.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+          class="slide"
+        />
+        <img
+          src="https://images.pexels.com/photos/7728803/pexels-photo-7728803.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+          class="slide"
+        />
+      </div>
+      <button class="prev" onclick="prevSlide()">❮</button>
+      <button class="next" onclick="nextSlide()">❯</button>
+    </div>
+
+    <script>
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".slide");
+
+      function showSlide(index) {
+        if (index >= slides.length) {
+          currentSlide = 0;
+        } else if (index < 0) {
+          currentSlide = slides.length - 1;
+        } else {
+          currentSlide = index;
+        }
+
+        const slideContainer = document.querySelector(".slides");
+        slideContainer.style.transform = `translateX(${-currentSlide * 100}%)`;
+
+        const activeSlide = slides[currentSlide];
+        slides.forEach((slide) => {
+          slide.classList.remove("active");
+        });
+        activeSlide.classList.add("active");
+      }
+
+      function nextSlide() {
+        showSlide(currentSlide + 1);
+      }
+      function prevSlide() {
+        showSlide(currentSlide - 1);
+      }
+
+      setInterval(nextSlide, 3000);
+    </script>
+  </body>
+</html>
