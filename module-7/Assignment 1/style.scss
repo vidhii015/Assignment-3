@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$white: #fcfcfc;
+$gray: #cbcdd3;
+$dark: #777777;
+$error: #ef8d9c;
+$orange: #ffc39e;
+$success: #b0db7d;
+$secondary: #99dbb4;
+
+@mixin box() {
+  height: 250px;
+  width: 245px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px rgba($gray, 10%);
+  position: relative;
+}
+@mixin flex(
+  $flex-direction: inherit,
+  $gap: inherit,
+  $justify-content: inherit,
+  $align-items: inherit
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  gap: $gap;
+}
+
+@mixin hover-effect($transform: inherit, $bg: inherit) {
+  &:hover {
+    transform: $transform;
+    background: $bg;
+  }
+}
+
+@mixin slow() {
+  transition: all 400ms;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  @include flex(row, 50px, center, center);
+}
+
+.success-box {
+  @include box();
+  background: linear-gradient(to bottom right, $success 40%, $secondary 100%);
+  box-shadow: 2px 2px 10px rgba($dark, 0.7);
+  @include slow();
+  @include hover-effect(
+    scale(1.05),
+    linear-gradient(to bottom right, $success 40%, $secondary 100%)
+  );
+
+  .face .happy {
+    border-color: transparent $dark $dark transparent;
+  }
+
+  .scale {
+    animation: scale 1s ease-in infinite;
+  }
+}
+
+.error-box {
+  @include box();
+  background: linear-gradient(to bottom left, $error 40%, $orange 100%);
+  box-shadow: 2px 2px 10px rgba($dark, 0.7);
+  @include slow();
+  @include hover-effect(
+    scale(1.05),
+    linear-gradient(to bottom left, $error 40%, $orange 100%)
+  );
+
+  .face2 {
+    animation: roll 3s ease-in-out infinite;
+  }
+
+  .face2 .sad {
+    top: 49%;
+    border-color: $dark transparent transparent $dark;
+  }
+
+  .move {
+    animation: move 3s ease-in-out infinite;
+  }
+
+  .button2 {
+    color: darken($error, 10%);
+  }
+}
+
+.success-box::before,
+.success-box::after,
+.error-box::before,
+.error-box::after {
+  content: "";
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: $white;
+  position: absolute;
+  top: 4%;
+  right: 6%;
+}
+
+.success-box::after,
+.error-box::after {
+  opacity: 0.5;
+  right: 12%;
+}
+
+.face,
+.face2 {
+  height: 22%;
+  width: 22%;
+  border-radius: 50%;
+  background-color: $white;
+  border: 1px solid $dark;
+  position: absolute;
+  top: 21%;
+  left: 37.5%;
+  z-index: 2;
+  animation: bounce 1s ease-in infinite;
+}
+
+.eye-1,
+.eye-2 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: $dark;
+  border-radius: 50%;
+  top: 40%;
+  left: 20%;
+}
+
+.eye-2 {
+  left: 68%;
+}
+
+.mouth {
+  position: absolute;
+  top: 43%;
+  left: 41%;
+  width: 7px;
+  height: 7px;
+  border: 2px solid;
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+
+.shadow {
+  position: absolute;
+  width: 21%;
+  height: 3%;
+  opacity: 0.5;
+  background: $dark;
+  left: 40%;
+  top: 43%;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.message {
+  @include flex(column, 3px);
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  height: 40%;
+  top: 47%;
+}
+
+.message h1 {
+  font-size: 14px;
+  color: $white;
+  letter-spacing: 5px;
+  margin-top: 5px;
+}
+
+.message p {
+  font-size: 9px;
+  color: darken($dark, 10%);
+  letter-spacing: 1px;
+}
+
+button {
+  position: absolute;
+  letter-spacing: 3px;
+  background: $white;
+  color: darken($secondary, 20%);
+  width: 50%;
+  height: 15%;
+  border-radius: 20px;
+  top: 73%;
+  left: 25%;
+  outline: 0;
+  border: none;
+  box-shadow: 2px 2px 10px rgba($dark, 0.5);
+  @include slow();
+  cursor: pointer;
+  @include hover-effect(scale(1.05), darken($white, 5%));
+}
+
+@keyframes bounce {
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes scale {
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0deg);
+    left: 25%;
+  }
+  50% {
+    left: 60%;
+    transform: rotate(168deg);
+  }
+  100% {
+    transform: rotate(0deg);
+    left: 25%;
+  }
+}
+
+@keyframes move {
+  0% {
+    left: 25%;
+  }
+  50% {
+    left: 60%;
+  }
+  100% {
+    left: 25%;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 5px;
+  right: 12px;
+  text-align: center;
+  font-size: 10px;
+  text-transform: uppercase;
+  padding: 10px;
+  p {
+    color: $error;
+    letter-spacing: 2px;
+  }
+  a {
+    color: $success;
+    text-decoration: none;
+  }
+}

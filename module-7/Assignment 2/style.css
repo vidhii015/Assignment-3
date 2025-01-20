@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 1vw 4vw;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+header img {
+  width: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header nav {
+  display: flex;
+  gap: 40px;
+}
+header nav a {
+  text-decoration: none;
+  color: #d51d13;
+  position: relative;
+  letter-spacing: 1px;
+  transition: all 400ms;
+}
+header nav a::before {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #d51d13;
+  position: absolute;
+  bottom: -4px;
+  opacity: 0;
+}
+header nav a:nth-child(1)::before, header nav a:hover::before {
+  opacity: 1;
+}
+
+main .hero-section img {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+main .hero-section p {
+  margin: 50px 0;
+  text-align: center;
+  font-size: 27px;
+  line-height: 45px;
+  letter-spacing: 1.5px;
+}
+main .catalogue-section {
+  margin-top: 50px;
+  text-align: center;
+}
+main .catalogue-section h1 {
+  font-size: 50px;
+  font-weight: 400;
+  margin: 30px 0;
+}
+main .catalogue-section p {
+  margin-top: 15px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+main .catalogue-section .travels {
+  margin-top: 50px;
+}
+main .catalogue-section .travels .gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: inherit;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+main .catalogue-section .travels .gallery img {
+  width: 30%;
+}
+main .catalogue-section .commissions {
+  margin-top: 50px;
+}
+main .catalogue-section .commissions p {
+  padding: 0 10%;
+  line-height: 27px;
+}
+main .catalogue-section .commissions .gallery figure {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  position: relative;
+}
+main .catalogue-section .commissions .gallery figure::before {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  bottom: -12px;
+}
+main .catalogue-section .commissions .gallery figure img {
+  width: 42%;
+}
+main .catalogue-section .commissions .gallery figure figcaption {
+  text-align: start;
+  width: 42%;
+}
+main .catalogue-section .commissions .gallery figure figcaption h2 {
+  font-size: 38px;
+  font-weight: 400;
+}
+main .catalogue-section .commissions .gallery figure figcaption p {
+  padding: 0;
+  margin-top: 20px;
+}
+
+footer {
+  margin: 60px 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: inherit;
+  align-items: inherit;
+  gap: 40px;
+  padding: 30px 50px;
+  border: 1px solid black;
+}
+footer h1 {
+  font-size: 40px;
+  font-weight: 400;
+  color: #d51d13;
+  border-bottom: 2px solid;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+footer p {
+  width: 60%;
+}
+footer .email,
+footer .phone {
+  display: flex;
+  flex-direction: column;
+  justify-content: inherit;
+  align-items: inherit;
+}
+footer .email b,
+footer .phone b {
+  color: #d51d13;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+footer .email a,
+footer .phone a {
+  color: black;
+  margin-top: 3px;
+}
+footer .copyright {
+  color: grey;
+  width: 100%;
+  text-align: end;
+}/*# sourceMappingURL=style.css.map */

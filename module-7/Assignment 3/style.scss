@@ -1,0 +1,46 @@
+@use "sass:color";
+@use "sass:map";
+
+$colors: seagreen, blue, cadetblue, red, yellow, purple, white;
+
+// classes for colors
+@each $color in $colors {
+  @for $i from 1 through 9 {
+    .#{$color}-#{$i*100} {
+      $shade: 100-($i * 10);
+      color: color.change($color, $lightness: $shade * 1%);
+    }
+  }
+}
+
+// classes for height
+@for $i from 1 through 10 {
+  .h-#{$i} {
+    height: $i * 5%;
+  }
+}
+
+// classes for width
+@for $i from 1 through 10 {
+  .w-#{$i} {
+    width: $i * 5%;
+  }
+}
+
+//  Map for border radius
+$border-radius: (
+  none: 0,
+  sm: 0.125rem,
+  // 2px
+  md: 0.25rem,
+  // 4px
+  lg: 0.5rem,
+  // 8px
+  xl: 0.75rem,
+  // 12px
+  "2xl": 1rem,
+  // 16px
+  "3xl": 1.5rem,
+  // 24px
+  full: 9999px,
+);
